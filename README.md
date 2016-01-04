@@ -1,0 +1,2 @@
+# PlaygamesAssignment
+We have several machines behind a gateway. The gateway exposes a REST interface where user can submit the target machine IP and a shell command with parameters. An agent program running on the machine runs the command and returns the output, which should be propagated back to the caller. (The target machine may be different from gateway machine)   Write the server and the agent.
