@@ -5,18 +5,24 @@ This is a play 2.2 project.
 API Description :
 Below is the REST API for running a command on the shell of a remote server (target).
 
-URL : http://<shell-server-ip>:9005/run
+URL : http://[shell-server-ip]:[port]/run
+
+Example : http://localhost:9005/run
+
 HTTP Request type : POST
+
 Request Sample :
 	{
 		"target":"127.0.0.1",
 		"command":"pwd"
 	}
+	
 Success Response : 
 	{
 		"status": "SUCCESS"
 		"output": "/home/amulya/playgames/shell-remote-agent/shell-agent"
 	}
+	
 Error Response :
 	{
 		"status": "FAILURE"
@@ -24,6 +30,7 @@ Error Response :
 	}
 
 Pre-requisites :
+
 1. Java 7
 2. Play 2.2 framework
 3. Add "port.<ip>=<shell-agent-port>" in the conf/application.conf for enabling connectivity between server and the remote agent.
