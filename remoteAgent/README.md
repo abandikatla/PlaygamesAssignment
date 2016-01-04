@@ -8,5 +8,5 @@ mvn clean package
 
 To Run :
 
-./start-agent.sh <port> &
+./start-agent.sh [port] &
 
