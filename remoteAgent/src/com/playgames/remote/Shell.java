@@ -21,6 +21,10 @@ public class Shell {
         StringBuilder sb = null;
         String s = null;
         try {
+        	sb = new StringBuilder();
+        	if(sb.length() >0){
+        		sb.append(System.getProperty("line.separator"));
+        	}
             while ((s = reader.readLine()) != null){
                 sb.append(s);
             }

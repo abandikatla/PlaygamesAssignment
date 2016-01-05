@@ -1,5 +1,4 @@
-import com.playgames.remote.SocketManager;
-
+package com.playgames.remote;
 import java.io.IOException;
 import java.net.ServerSocket;
 
@@ -26,6 +25,7 @@ public class Agent {
             socketManager = new SocketManager(port);
         }catch (IOException e){
             System.err.println("Error opening the socket " + e.getMessage());
+            System.exit(1);
         }
         try {
             socketManager.run();
